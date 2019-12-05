@@ -1,6 +1,8 @@
 package com.asche.hibernate.modelo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
@@ -10,11 +12,17 @@ import java.util.Date;
 public class Empleado  implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Column(name=
-    )
+    @Id
+    @Column(name= "COD_EMPLEADO")
     private Long codigo;
+
+    @Column(name= "APELLIDO")
     private String apellidos;
+
+    @Column(name= "NOMBRE")
     private String nombre;
+
+    @Column(name= "FECHA_NACIMIENTO")
     private Date fechaNacimiento;
 
     public Empleado(){
